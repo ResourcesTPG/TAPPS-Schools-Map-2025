@@ -1,0 +1,3077 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_509aa26acf63301907e403b5b998a9d9 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+<div style="
+position: fixed;
+bottom: 40px; left: 40px;
+width: 230px;
+background-color: white;
+border:2px solid grey;
+z-index:9999;
+font-size:14px;
+padding:10px;
+">
+<b>Map Key</b><br><br>
+<span style='color:red;font-size:18px;'>●</span> SCHEELS Locations (2)<br>
+<span style='color:gray;font-size:18px;'>●</span> Schools within 25 miles<br><br>
+<b>Touched Schools:</b> 183
+</div>
+    
+            <div class="folium-map" id="map_509aa26acf63301907e403b5b998a9d9" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_509aa26acf63301907e403b5b998a9d9 = L.map(
+                "map_509aa26acf63301907e403b5b998a9d9",
+                {
+                    center: [32.26509258251366, -97.10054015027323],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 6,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_2f558978820ff68582aa29f86e5b2c8f = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_2f558978820ff68582aa29f86e5b2c8f.addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            var circle_marker_83efecd46ed8d0683f1e6422cb578ae1 = L.circleMarker(
+                [32.827288, -96.6808535],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_83efecd46ed8d0683f1e6422cb578ae1.bindTooltip(
+                `<div>
+                     Adams High School
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_969e7aa7dec7cac8999fbc8734d40918 = L.circleMarker(
+                [32.7474258, -96.8224594],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_969e7aa7dec7cac8999fbc8734d40918.bindTooltip(
+                `<div>
+                     Adamson High School
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_76dfad5ffcf91b45a408e4950489130e = L.circleMarker(
+                [32.9155182, -96.7705752],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_76dfad5ffcf91b45a408e4950489130e.bindTooltip(
+                `<div>
+                     Akiba Yavneh Academy of Dallas
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_608d703b5a7ed02ae22329e36b3e7193 = L.circleMarker(
+                [32.915997, -96.799774],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_608d703b5a7ed02ae22329e36b3e7193.bindTooltip(
+                `<div>
+                     Alcuin School-Dallas
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ba3ab890e14ca2d1a24c4c9dcaf4573f = L.circleMarker(
+                [33.1075053, -96.6587152],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_ba3ab890e14ca2d1a24c4c9dcaf4573f.bindTooltip(
+                `<div>
+                     Allen High School
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9df5a762f1587e58a19d656dfc697eb2 = L.circleMarker(
+                [30.3756676, -97.7529498],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_9df5a762f1587e58a19d656dfc697eb2.bindTooltip(
+                `<div>
+                     Anderson High School
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8daf710f933dbc7469917c2b8f59bc06 = L.circleMarker(
+                [32.9978824, -97.2306265],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_8daf710f933dbc7469917c2b8f59bc06.bindTooltip(
+                `<div>
+                     Argyle High School
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5099dc8fba8ba2c7daec9104b1336e7b = L.circleMarker(
+                [33.2977331, -96.9804563],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_5099dc8fba8ba2c7daec9104b1336e7b.bindTooltip(
+                `<div>
+                     Aubrey High School
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_aeef116c68cc072858ee11c9af6992f9 = L.circleMarker(
+                [30.3992488, -97.7518561],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_aeef116c68cc072858ee11c9af6992f9.bindTooltip(
+                `<div>
+                     Austin Classical School - High School
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a84cddaec0c3a40e72608f2e80ee9502 = L.circleMarker(
+                [30.2736061, -97.7674639],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_a84cddaec0c3a40e72608f2e80ee9502.bindTooltip(
+                `<div>
+                     Austin High School
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_183d52a86dd176509aa6de2f2f5d8f5d = L.circleMarker(
+                [30.3602094, -97.7083219],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_183d52a86dd176509aa6de2f2f5d8f5d.bindTooltip(
+                `<div>
+                     Austin Navarro ECHS
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1e86f70f4f95f6105be9fbb7d8e2cb52 = L.circleMarker(
+                [30.2316817, -97.912647],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_1e86f70f4f95f6105be9fbb7d8e2cb52.bindTooltip(
+                `<div>
+                     Austin Waldorf School-Austin
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_02750eb7f6dde1d71c2dd2cb9add95fb = L.circleMarker(
+                [32.8430195, -97.1636537],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_02750eb7f6dde1d71c2dd2cb9add95fb.bindTooltip(
+                `<div>
+                     Bell High School
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1ee0b5557817d89a4909c614cc7cfb97 = L.circleMarker(
+                [32.9372325, -96.6933117],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_1ee0b5557817d89a4909c614cc7cfb97.bindTooltip(
+                `<div>
+                     Berkner High School
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_0cbbf10ac5572aa727fa2df423d751de = L.circleMarker(
+                [32.8609004, -97.1916962],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_0cbbf10ac5572aa727fa2df423d751de.bindTooltip(
+                `<div>
+                     Birdville High School
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d4592c8975eb6bc90a9029ef529d55bc = L.circleMarker(
+                [32.8184375, -96.6820318],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_d4592c8975eb6bc90a9029ef529d55bc.bindTooltip(
+                `<div>
+                     Bishop Lynch High School-Dallas
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_49e1246e9cb4af6ec3b64c6362b5029e = L.circleMarker(
+                [30.1869055, -97.8589551],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_49e1246e9cb4af6ec3b64c6362b5029e.bindTooltip(
+                `<div>
+                     Bowie High School
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_fe77ecccbd56c9812e5423e281c287c7 = L.circleMarker(
+                [33.2030362, -96.6784568],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_fe77ecccbd56c9812e5423e281c287c7.bindTooltip(
+                `<div>
+                     Boyd High School
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c1070a13b7ff1f484c97f0e6e078002f = L.circleMarker(
+                [33.2196377, -96.9246308],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_c1070a13b7ff1f484c97f0e6e078002f.bindTooltip(
+                `<div>
+                     Braswell HS
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_974f4ab80d2ee8a6bed0a420e77d2800 = L.circleMarker(
+                [30.3907331, -97.6825928],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_974f4ab80d2ee8a6bed0a420e77d2800.bindTooltip(
+                `<div>
+                     Brentwood Christian School-Austin
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_19c6f51a068477a841f9e7d713dc1e46 = L.circleMarker(
+                [32.9472523, -96.6697487],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_19c6f51a068477a841f9e7d713dc1e46.bindTooltip(
+                `<div>
+                     Brighter Horizons Academy-Garland
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_11f8dd83b7d6c03d0b14b15af2ae6856 = L.circleMarker(
+                [32.8950256, -96.8698348],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_11f8dd83b7d6c03d0b14b15af2ae6856.bindTooltip(
+                `<div>
+                     Cambridge School of Dallas
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_fbf0ddc9ee2865df722445be4fb41686 = L.circleMarker(
+                [32.9400274, -97.1746537],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_fbf0ddc9ee2865df722445be4fb41686.bindTooltip(
+                `<div>
+                     Carroll Senior High School
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9014177d1420d75f0ebf1ffff5a958c5 = L.circleMarker(
+                [30.4724515, -97.8436613],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_9014177d1420d75f0ebf1ffff5a958c5.bindTooltip(
+                `<div>
+                     Cedar Park High School
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_14890a09213cc1fcdb8150c294b6db7c = L.circleMarker(
+                [30.4967079, -97.6668284],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_14890a09213cc1fcdb8150c294b6db7c.bindTooltip(
+                `<div>
+                     Cedar Ridge High School
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_01f473e1c0232bf8c0bcd1a1a08eb689 = L.circleMarker(
+                [33.3678688, -96.7614441],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_01f473e1c0232bf8c0bcd1a1a08eb689.bindTooltip(
+                `<div>
+                     Celina High School
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_925efe2cbbcf6a391edf6deb03e34f60 = L.circleMarker(
+                [33.1360669, -96.7726231],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_925efe2cbbcf6a391edf6deb03e34f60.bindTooltip(
+                `<div>
+                     Centennial High School
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_726b59b2301a08e7fe16f843daa35228 = L.circleMarker(
+                [32.8877284, -97.1032288],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_726b59b2301a08e7fe16f843daa35228.bindTooltip(
+                `<div>
+                     Colleyville Heritage High School
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_942bf311324a03dd02ee6d350e3f5a98 = L.circleMarker(
+                [30.4352081, -97.6474284],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_942bf311324a03dd02ee6d350e3f5a98.bindTooltip(
+                `<div>
+                     Concordia High School-Pflugerville
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_afe393f83d85223d9f631fa515c0b9c6 = L.circleMarker(
+                [30.419283, -97.6763246],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_afe393f83d85223d9f631fa515c0b9c6.bindTooltip(
+                `<div>
+                     Connally High School
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5529ba8477556c3d40fef1c36d540f52 = L.circleMarker(
+                [32.8765541, -96.7516594],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_5529ba8477556c3d40fef1c36d540f52.bindTooltip(
+                `<div>
+                     Conrad High School
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a5329c4911351aaa5f4ec106422ac118 = L.circleMarker(
+                [32.9760242, -97.0013107],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_a5329c4911351aaa5f4ec106422ac118.bindTooltip(
+                `<div>
+                     Coppell High School
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ac1b89370a4eaf3bceefd011c0cb0fd9 = L.circleMarker(
+                [33.0228462, -97.1071049],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_ac1b89370a4eaf3bceefd011c0cb0fd9.bindTooltip(
+                `<div>
+                     Coram Deo Academy-Flower Mound
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_db9af6c858bf448e540573e6e4bafae1 = L.circleMarker(
+                [33.1102843, -96.7515551],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_db9af6c858bf448e540573e6e4bafae1.bindTooltip(
+                `<div>
+                     Coram Deo Academy-Plano
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6b2967449d0dc43455a5e52cab9f83b0 = L.circleMarker(
+                [33.19085, -96.6218096],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_6b2967449d0dc43455a5e52cab9f83b0.bindTooltip(
+                `<div>
+                     Cornerstone Christian Academy-McKinney
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a47c383db115b1d0eaa8a615ebcb966c = L.circleMarker(
+                [32.8670103, -97.155122],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_a47c383db115b1d0eaa8a615ebcb966c.bindTooltip(
+                `<div>
+                     Covenant Christian Academy-Colleyville
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_39fd81705f67dca6a49501f64682e26b = L.circleMarker(
+                [33.0050805, -96.9105998],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_39fd81705f67dca6a49501f64682e26b.bindTooltip(
+                `<div>
+                     Creekview High School
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_09a0393708e0ffffe6a950286135d139 = L.circleMarker(
+                [30.2147211, -97.7974133],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_09a0393708e0ffffe6a950286135d139.bindTooltip(
+                `<div>
+                     Crockett High School
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_389f98d7dc6ec604c3757deca09a5633 = L.circleMarker(
+                [32.8313552, -96.6263094],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_389f98d7dc6ec604c3757deca09a5633.bindTooltip(
+                `<div>
+                     Dallas Christian School-Mesquite
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4dea4a4c86fe6029210f24ef95efd10b = L.circleMarker(
+                [32.9911574, -96.7581327],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_4dea4a4c86fe6029210f24ef95efd10b.bindTooltip(
+                `<div>
+                     Dallas International School
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_614958744398c180e472f7eb7031d8dc = L.circleMarker(
+                [32.9062724, -96.7628766],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_614958744398c180e472f7eb7031d8dc.bindTooltip(
+                `<div>
+                     Dallas Lutheran School
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_27ff8564fed935a3f5bd1ed3c9f588f1 = L.circleMarker(
+                [33.2346699, -97.1092344],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_27ff8564fed935a3f5bd1ed3c9f588f1.bindTooltip(
+                `<div>
+                     Denton Calvary Academy
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e06319b4639c3034f0caf2d148e9ed09 = L.circleMarker(
+                [33.2245835, -97.1443512],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_e06319b4639c3034f0caf2d148e9ed09.bindTooltip(
+                `<div>
+                     Denton High School
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ecc444b385b92eea52d9124bf16e07c0 = L.circleMarker(
+                [30.2571775, -97.6820305],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_ecc444b385b92eea52d9124bf16e07c0.bindTooltip(
+                `<div>
+                     Eastside Memorial High School
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_78b3661bbf5522970aa4611ccda89675 = L.circleMarker(
+                [32.9709784, -96.8032028],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_78b3661bbf5522970aa4611ccda89675.bindTooltip(
+                `<div>
+                     Fairhill-Dallas
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ff17bec5ed52771f91fbdf2116edc271 = L.circleMarker(
+                [32.7905203, -96.6791826],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_ff17bec5ed52771f91fbdf2116edc271.bindTooltip(
+                `<div>
+                     First Baptist Academy-Dallas
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8545e35523038af302a374f1e8166d91 = L.circleMarker(
+                [30.8307148, -97.7949182],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_8545e35523038af302a374f1e8166d91.bindTooltip(
+                `<div>
+                     Florence High School
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_daafcebd10826543b0d24c2fd4dff5d9 = L.circleMarker(
+                [33.0318535, -97.0832299],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_daafcebd10826543b0d24c2fd4dff5d9.bindTooltip(
+                `<div>
+                     Flower Mound High School
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_17e59c380a72d07a1cc82192e9e17b32 = L.circleMarker(
+                [32.8567123, -97.2199037],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_17e59c380a72d07a1cc82192e9e17b32.bindTooltip(
+                `<div>
+                     Fort Worth Christian
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a5bbe3a53dbf47b07c4eab8714096f67 = L.circleMarker(
+                [33.1282403, -96.8211052],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_a5bbe3a53dbf47b07c4eab8714096f67.bindTooltip(
+                `<div>
+                     Frisco High School
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6074a5a0d129715552b115940cbae2f2 = L.circleMarker(
+                [33.1639336, -96.7538217],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_6074a5a0d129715552b115940cbae2f2.bindTooltip(
+                `<div>
+                     Frisco Independence HS
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3153e2579285bdc47ee9f132d62cf7e2 = L.circleMarker(
+                [33.1914433, -96.8678729],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_3153e2579285bdc47ee9f132d62cf7e2.bindTooltip(
+                `<div>
+                     Frisco Lone Star High School
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9c0ec2fd23229f576ccca2b3268aa0f4 = L.circleMarker(
+                [33.1799504, -96.8289205],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_9c0ec2fd23229f576ccca2b3268aa0f4.bindTooltip(
+                `<div>
+                     Frisco Memorial HS
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f7e9e6a09044cb6bf75c4a2db0b4040d = L.circleMarker(
+                [32.9243118, -96.6258957],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_f7e9e6a09044cb6bf75c4a2db0b4040d.bindTooltip(
+                `<div>
+                     Garland Christian Academy
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5fe82a6bca078f3701d204e0230fe3b5 = L.circleMarker(
+                [32.909972, -96.6457277],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_5fe82a6bca078f3701d204e0230fe3b5.bindTooltip(
+                `<div>
+                     Garland High School
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_995106326877ad596d144481fd5e8fa6 = L.circleMarker(
+                [30.6418857, -97.6183962],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_995106326877ad596d144481fd5e8fa6.bindTooltip(
+                `<div>
+                     Georgetown East View
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_fc7b475cdfd98e9cbd2715d066969534 = L.circleMarker(
+                [30.6609606, -97.6634264],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_fc7b475cdfd98e9cbd2715d066969534.bindTooltip(
+                `<div>
+                     Georgetown High School
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_cd9578db7ca0c36001d1c45572382455 = L.circleMarker(
+                [32.7545564, -97.0034808],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_cd9578db7ca0c36001d1c45572382455.bindTooltip(
+                `<div>
+                     Grand Prairie High School
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5d10221e1379c686276fa848bf6ef965 = L.circleMarker(
+                [32.9334708, -97.0687548],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_5d10221e1379c686276fa848bf6ef965.bindTooltip(
+                `<div>
+                     Grapevine Faith Christian School
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_41614881c4bade893eac9ac94f7a09c1 = L.circleMarker(
+                [32.915619, -97.1196393],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_41614881c4bade893eac9ac94f7a09c1.bindTooltip(
+                `<div>
+                     Grapevine High School
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_55801b4ac685d80210f7032b831a5bb8 = L.circleMarker(
+                [33.3342807, -96.7730308],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_55801b4ac685d80210f7032b831a5bb8.bindTooltip(
+                `<div>
+                     Gunter High School
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_514cecb1d3e1a05db141a655b5aec638 = L.circleMarker(
+                [33.1354079, -97.1031742],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_514cecb1d3e1a05db141a655b5aec638.bindTooltip(
+                `<div>
+                     Guyer High School
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_56f0e124ab952e2eccddfcd4a255afaf = L.circleMarker(
+                [32.9363651, -97.2499675],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_56f0e124ab952e2eccddfcd4a255afaf.bindTooltip(
+                `<div>
+                     Harvest Christian Academy-Keller
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9d1ee57deac9df1a53d1546bcf10cf96 = L.circleMarker(
+                [33.035561, -96.8587269],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_9d1ee57deac9df1a53d1546bcf10cf96.bindTooltip(
+                `<div>
+                     Hebron High School
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_0745d3c6a3f42fd9d52dab3e696c9b17 = L.circleMarker(
+                [30.4657541, -97.5877803],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_0745d3c6a3f42fd9d52dab3e696c9b17.bindTooltip(
+                `<div>
+                     Hendrickson High School
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8749dac642ab8f99138be6f1c50cc4cc = L.circleMarker(
+                [33.1797084, -96.7544333],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_8749dac642ab8f99138be6f1c50cc4cc.bindTooltip(
+                `<div>
+                     Heritage High School
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ff6fc6666c634dd01fcaa63c951d1228 = L.circleMarker(
+                [32.8481771, -96.8076366],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_ff6fc6666c634dd01fcaa63c951d1228.bindTooltip(
+                `<div>
+                     Highland Park High School
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d42d99a87121bcf5384061ebfe9ad30f = L.circleMarker(
+                [30.4645746, -97.8191756],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_d42d99a87121bcf5384061ebfe9ad30f.bindTooltip(
+                `<div>
+                     Hill Country Christian High School-Austin
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_df8f974fa8d68e5b0b00086afb43cb59 = L.circleMarker(
+                [32.8831308, -96.7857422],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_df8f974fa8d68e5b0b00086afb43cb59.bindTooltip(
+                `<div>
+                     Hillcrest High School
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4c567b510ddfa6a123db1a881ca724bd = L.circleMarker(
+                [30.5365006, -97.5624718],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_4c567b510ddfa6a123db1a881ca724bd.bindTooltip(
+                `<div>
+                     Hutto HS
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_dfc4a465d1df150ef240b90ad98815ee = L.circleMarker(
+                [30.4082525, -97.7298812],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_dfc4a465d1df150ef240b90ad98815ee.bindTooltip(
+                `<div>
+                     Hyde Park High School-Austin
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b148c5c9174f3fd4b835bc4cb3108101 = L.circleMarker(
+                [32.8242507, -96.9503481],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_b148c5c9174f3fd4b835bc4cb3108101.bindTooltip(
+                `<div>
+                     Irving High School
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6d63c8afa496787e139fae55ebefa9b0 = L.circleMarker(
+                [30.824616, -97.6043608],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_6d63c8afa496787e139fae55ebefa9b0.bindTooltip(
+                `<div>
+                     Jarrell High School
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_878f5567766acd4e08e929bdba0973e9 = L.circleMarker(
+                [32.8814798, -96.8439246],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_878f5567766acd4e08e929bdba0973e9.bindTooltip(
+                `<div>
+                     Jefferson High School
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b1bbfd6e96cbfb5cc1cfa0a6df9866c1 = L.circleMarker(
+                [32.9170915, -96.8206656],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_b1bbfd6e96cbfb5cc1cfa0a6df9866c1.bindTooltip(
+                `<div>
+                     Jesuit College Preparatory School
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e5db5f80e6d6c5156b191eaf6b64da66 = L.circleMarker(
+                [33.0117543, -96.7647903],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_e5db5f80e6d6c5156b191eaf6b64da66.bindTooltip(
+                `<div>
+                     John Paul II-Plano
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ca772408b12b6a474b7ff54961116d24 = L.circleMarker(
+                [30.311832, -97.6554891],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_ca772408b12b6a474b7ff54961116d24.bindTooltip(
+                `<div>
+                     Johnson High School
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ec39c884b338d29f0497c3c872a777a8 = L.circleMarker(
+                [32.9388097, -97.2341622],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_ec39c884b338d29f0497c3c872a777a8.bindTooltip(
+                `<div>
+                     Keller High School
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_80d835c7ec5fc3040a99fdc3f3f36d27 = L.circleMarker(
+                [33.2597349, -97.227556],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_80d835c7ec5fc3040a99fdc3f3f36d27.bindTooltip(
+                `<div>
+                     Krum High School
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4838de3a464e8bbb1f20f5662251db58 = L.circleMarker(
+                [30.4569275, -97.9701846],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_4838de3a464e8bbb1f20f5662251db58.bindTooltip(
+                `<div>
+                     Lago Vista High School
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f951cd626e5834607605ec66d4b6edb3 = L.circleMarker(
+                [33.1192875, -97.0255641],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_f951cd626e5834607605ec66d4b6edb3.bindTooltip(
+                `<div>
+                     Lake Dallas High School
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_455329fab084ada38baf7889d35c8323 = L.circleMarker(
+                [32.8874248, -96.7267201],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_455329fab084ada38baf7889d35c8323.bindTooltip(
+                `<div>
+                     Lake Highlands High School
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f57442b329cff8a13098960db1fc4188 = L.circleMarker(
+                [30.3278393, -97.9653625],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_f57442b329cff8a13098960db1fc4188.bindTooltip(
+                `<div>
+                     Lake Travis High School
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_12ed1137b3498f583680f8b89c7b8c0b = L.circleMarker(
+                [32.8228096, -96.7491048],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_12ed1137b3498f583680f8b89c7b8c0b.bindTooltip(
+                `<div>
+                     Lakehill Prep School-Dallas
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ca1b8977d2c165fdf6842a25da7e1754 = L.circleMarker(
+                [32.857054, -96.5751578],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_ca1b8977d2c165fdf6842a25da7e1754.bindTooltip(
+                `<div>
+                     Lakeview Centennial High School
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_93082c73711307fe54680fe740415bb1 = L.circleMarker(
+                [30.5374634, -97.849035],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_93082c73711307fe54680fe740415bb1.bindTooltip(
+                `<div>
+                     Leander High School
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9849f7e780acf7ddec003f71da61afa3 = L.circleMarker(
+                [33.1220042, -96.799927],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_9849f7e780acf7ddec003f71da61afa3.bindTooltip(
+                `<div>
+                     Lebanon Trail HS
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5c332d9fb6633ab3b7d8270ec7977cb8 = L.circleMarker(
+                [33.1314607, -96.8441178],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_5c332d9fb6633ab3b7d8270ec7977cb8.bindTooltip(
+                `<div>
+                     Legacy Christian HS-Frisco
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_fa527e9051ab5e1c2010c0c7c5f4cd08 = L.circleMarker(
+                [33.0442367, -97.0351068],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_fa527e9051ab5e1c2010c0c7c5f4cd08.bindTooltip(
+                `<div>
+                     Lewisville High School
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9705fc14c508b7bca68b045b19eb7204 = L.circleMarker(
+                [32.9900662, -97.2348922],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_9705fc14c508b7bca68b045b19eb7204.bindTooltip(
+                `<div>
+                     Liberty Christian School-Argyle
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b0343b3f3c058bb05da824ac26940c27 = L.circleMarker(
+                [33.1408006, -96.7427923],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_b0343b3f3c058bb05da824ac26940c27.bindTooltip(
+                `<div>
+                     Liberty High School
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8a2d412a246743b8ec0a299bcc174ba0 = L.circleMarker(
+                [30.6824678, -97.9538474],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_8a2d412a246743b8ec0a299bcc174ba0.bindTooltip(
+                `<div>
+                     Liberty Hill High School
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e30d9dd1513e5ad6dafae64f120858da = L.circleMarker(
+                [32.7554538, -96.7504029],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_e30d9dd1513e5ad6dafae64f120858da.bindTooltip(
+                `<div>
+                     Lincoln High School
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_fdc83addfba8909dc36161c46cb8a71c = L.circleMarker(
+                [33.1832789, -96.9055352],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_fdc83addfba8909dc36161c46cb8a71c.bindTooltip(
+                `<div>
+                     Little Elm High School
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_861dcbd9ede30181074a8013d9cf3660 = L.circleMarker(
+                [33.1021219, -96.6134549],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_861dcbd9ede30181074a8013d9cf3660.bindTooltip(
+                `<div>
+                     Lovejoy High School
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b90dfa30f661f57eb47e493f259d770b = L.circleMarker(
+                [33.0843098, -96.5829252],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_b90dfa30f661f57eb47e493f259d770b.bindTooltip(
+                `<div>
+                     Lucas Christian Academy
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9156ee3a2cd521f8c6a5ed51160fb7dc = L.circleMarker(
+                [32.8537391, -96.9574818],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_9156ee3a2cd521f8c6a5ed51160fb7dc.bindTooltip(
+                `<div>
+                     MacArthur High School
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_aa6b7ab709bc09fb517dedc5044bd923 = L.circleMarker(
+                [32.7711024, -96.7646617],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_aa6b7ab709bc09fb517dedc5044bd923.bindTooltip(
+                `<div>
+                     Madison High School
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_feb3e596c35c4d7c7d237971a83fbc03 = L.circleMarker(
+                [30.3530109, -97.5634397],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_feb3e596c35c4d7c7d237971a83fbc03.bindTooltip(
+                `<div>
+                     Manor High School
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ba831187ba2694fec0aa9da852eab02f = L.circleMarker(
+                [33.0638781, -97.0639216],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_ba831187ba2694fec0aa9da852eab02f.bindTooltip(
+                `<div>
+                     Marcus High School
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3d507094d973f37e5e96384449a1dbd1 = L.circleMarker(
+                [30.327545, -97.7288204],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_3d507094d973f37e5e96384449a1dbd1.bindTooltip(
+                `<div>
+                     McCallum High School
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_705605e4a0a1f235cdb9879446313006 = L.circleMarker(
+                [33.2038556, -96.6591358],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_705605e4a0a1f235cdb9879446313006.bindTooltip(
+                `<div>
+                     McKinney Christian Academy
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6cf51dc40edb4d4ce7e9e5571e053f3d = L.circleMarker(
+                [33.1880962, -96.632247],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_6cf51dc40edb4d4ce7e9e5571e053f3d.bindTooltip(
+                `<div>
+                     McKinney High School
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4cb1ef4be8e25692b4e40be530634a97 = L.circleMarker(
+                [33.2310182, -96.6420572],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_4cb1ef4be8e25692b4e40be530634a97.bindTooltip(
+                `<div>
+                     McKinney North High School
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_460c91a5bb9f9cb17758d3e296576637 = L.circleMarker(
+                [30.4492169, -97.7330134],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_460c91a5bb9f9cb17758d3e296576637.bindTooltip(
+                `<div>
+                     McNeil High School
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c5f5bc755477a1b7dd97bac0ec4ba254 = L.circleMarker(
+                [33.2908751, -96.5760031],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_c5f5bc755477a1b7dd97bac0ec4ba254.bindTooltip(
+                `<div>
+                     Melissa High School
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9d32d8f26da9a0e1ac9e098b17a49b13 = L.circleMarker(
+                [32.7211702, -96.9108042],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_9d32d8f26da9a0e1ac9e098b17a49b13.bindTooltip(
+                `<div>
+                     Molina High School
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_bb5554b77e429a63f47ae46d7cda0446 = L.circleMarker(
+                [32.9577427, -96.6379047],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_bb5554b77e429a63f47ae46d7cda0446.bindTooltip(
+                `<div>
+                     Naaman Forest High School
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6f15a0666cf8893cbccf24f5a03ab34f = L.circleMarker(
+                [33.0186482, -97.2046229],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_6f15a0666cf8893cbccf24f5a03ab34f.bindTooltip(
+                `<div>
+                     Nelson High School
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_0677fe5cf276db6d1f68406104b3a57e = L.circleMarker(
+                [30.3446523, -97.5780554],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_0677fe5cf276db6d1f68406104b3a57e.bindTooltip(
+                `<div>
+                     New Tech HS
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c1a44124d8e7d254545f2c37d1a12011 = L.circleMarker(
+                [32.9784132, -96.8934245],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_c1a44124d8e7d254545f2c37d1a12011.bindTooltip(
+                `<div>
+                     Newman Smith High School
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3f393b25550fc872a539f4445ec1b902 = L.circleMarker(
+                [32.7927965, -96.9470821],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_3f393b25550fc872a539f4445ec1b902.bindTooltip(
+                `<div>
+                     Nimitz High School
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_0ae9b0f529f922da85fc0df2d82dcb5f = L.circleMarker(
+                [32.9955256, -96.7280488],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_0ae9b0f529f922da85fc0df2d82dcb5f.bindTooltip(
+                `<div>
+                     North Dallas Adventist Academy HS-Richardson
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_54aecd1881fc43af9af09629850bddcd = L.circleMarker(
+                [32.8096234, -96.7950201],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_54aecd1881fc43af9af09629850bddcd.bindTooltip(
+                `<div>
+                     North Dallas High School
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_fe72465751e0a2c4e54d05b920678ed0 = L.circleMarker(
+                [32.9313904, -96.6593018],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_fe72465751e0a2c4e54d05b920678ed0.bindTooltip(
+                `<div>
+                     North Garland High School
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_57600628f3e7e8bd3ccefa46d99fbbc8 = L.circleMarker(
+                [32.808176, -96.6291604],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_57600628f3e7e8bd3ccefa46d99fbbc8.bindTooltip(
+                `<div>
+                     North Mesquite High School
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d8fb90992358c915bfdb9d8802708361 = L.circleMarker(
+                [30.3242263, -97.6915168],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_d8fb90992358c915bfdb9d8802708361.bindTooltip(
+                `<div>
+                     Northeast ECHS
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f572f81ca074a403b586ed2b4f1ff12b = L.circleMarker(
+                [32.9351442, -96.8431746],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_f572f81ca074a403b586ed2b4f1ff12b.bindTooltip(
+                `<div>
+                     Parish Episcopal School-Dallas
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_87571d52da27374a123a7a6d92834057 = L.circleMarker(
+                [32.9725152, -96.7661685],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_87571d52da27374a123a7a6d92834057.bindTooltip(
+                `<div>
+                     Pearce High School
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_86f5ed172827df16aa135040ed735e46 = L.circleMarker(
+                [30.4443784, -97.6330151],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_86f5ed172827df16aa135040ed735e46.bindTooltip(
+                `<div>
+                     Pflugerville High School
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_57a0c473049162883b49b4ef1eeaa6f4 = L.circleMarker(
+                [33.4110341, -96.9481203],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_57a0c473049162883b49b4ef1eeaa6f4.bindTooltip(
+                `<div>
+                     Pilot Point High School
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8056b248e16bb4d335619273fa667e4a = L.circleMarker(
+                [32.7819353, -96.8587387],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_8056b248e16bb4d335619273fa667e4a.bindTooltip(
+                `<div>
+                     Pinkston High School
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_27494bafa7fa8b699c5ea89605440cfe = L.circleMarker(
+                [33.0408802, -96.6445845],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_27494bafa7fa8b699c5ea89605440cfe.bindTooltip(
+                `<div>
+                     Plano East High School
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_347e17426c4fbb45ac5bb0530f7b9e5e = L.circleMarker(
+                [33.0290883, -96.7519084],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_347e17426c4fbb45ac5bb0530f7b9e5e.bindTooltip(
+                `<div>
+                     Plano High School
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6ef6bf43f94de161187e87d0a208ba30 = L.circleMarker(
+                [33.0447682, -96.8144664],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_6ef6bf43f94de161187e87d0a208ba30.bindTooltip(
+                `<div>
+                     Plano West High School
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_cce4b23dd1a4121ffd260f68811e35f8 = L.circleMarker(
+                [33.1838142, -97.2927887],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_cce4b23dd1a4121ffd260f68811e35f8.bindTooltip(
+                `<div>
+                     Ponder High School
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_69bda6f0a92a5eb186c476c77ac0b49b = L.circleMarker(
+                [32.807194, -96.6092706],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_69bda6f0a92a5eb186c476c77ac0b49b.bindTooltip(
+                `<div>
+                     Poteet High School
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d5058a35b0c6dfc0b14ec5dc49ee8270 = L.circleMarker(
+                [33.2464364, -96.8131085],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_d5058a35b0c6dfc0b14ec5dc49ee8270.bindTooltip(
+                `<div>
+                     Prestonwood Christian Academy North-Prosper
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_eac58e91565e1a3c5046eabe94df5ebe = L.circleMarker(
+                [33.0282427, -96.8467175],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_eac58e91565e1a3c5046eabe94df5ebe.bindTooltip(
+                `<div>
+                     Prestonwood Christian Academy-Plano
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_14e12e5921f0ddc32d7e6f7b931e079f = L.circleMarker(
+                [33.0201613, -96.8426864],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_14e12e5921f0ddc32d7e6f7b931e079f.bindTooltip(
+                `<div>
+                     Prince of Peace Christian School-Carrollton
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e893cf4d8e58ad9b33f07d2029e5df6b = L.circleMarker(
+                [33.2032436, -96.5205008],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_e893cf4d8e58ad9b33f07d2029e5df6b.bindTooltip(
+                `<div>
+                     Princeton High School
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b44ae8799f818fb1cde9ca1b3ffe1413 = L.circleMarker(
+                [33.259195, -96.7984315],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_b44ae8799f818fb1cde9ca1b3ffe1413.bindTooltip(
+                `<div>
+                     Prosper High School
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e030a82b7dd2981b7419fc54280fca3b = L.circleMarker(
+                [32.9187294, -96.9454906],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_e030a82b7dd2981b7419fc54280fca3b.bindTooltip(
+                `<div>
+                     Ranchview High School
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_08d9d3b4f739fcd2221b5c6783e82a5d = L.circleMarker(
+                [33.1314671, -96.864395],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_08d9d3b4f739fcd2221b5c6783e82a5d.bindTooltip(
+                `<div>
+                     Reedy HS
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_01bd7fe71325699ad980ba5d8066d723 = L.circleMarker(
+                [30.253408, -97.8418897],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_01bd7fe71325699ad980ba5d8066d723.bindTooltip(
+                `<div>
+                     Regents School of Austin
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_49d8155f488dc711de4711f38888a069 = L.circleMarker(
+                [32.9524772, -96.7622242],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_49d8155f488dc711de4711f38888a069.bindTooltip(
+                `<div>
+                     Richardson High School
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_24659e97fd026bbb27c6f916431b8514 = L.circleMarker(
+                [33.2094965, -96.7699827],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_24659e97fd026bbb27c6f916431b8514.bindTooltip(
+                `<div>
+                     Rock Hill High School
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_18eede3147c69bb75828fa6b531671c2 = L.circleMarker(
+                [32.7417005, -96.7953321],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_18eede3147c69bb75828fa6b531671c2.bindTooltip(
+                `<div>
+                     Roosevelt High School
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d6910f0c79d4021c8d1995cd5a02f114 = L.circleMarker(
+                [30.5085153, -97.691359],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_d6910f0c79d4021c8d1995cd5a02f114.bindTooltip(
+                `<div>
+                     Round Rock Christian Academy
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_be92fd8a702c348519ca7e807f83bfec = L.circleMarker(
+                [30.5095626, -97.6976253],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_be92fd8a702c348519ca7e807f83bfec.bindTooltip(
+                `<div>
+                     Round Rock High School
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_56d2e605b429550a1ee1a30b8255c78c = L.circleMarker(
+                [30.5713003, -97.8206567],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_56d2e605b429550a1ee1a30b8255c78c.bindTooltip(
+                `<div>
+                     Rouse High School
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_87e7f8b3687010412786049834bec799 = L.circleMarker(
+                [32.8863081, -96.5572076],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_87e7f8b3687010412786049834bec799.bindTooltip(
+                `<div>
+                     Rowlett High School
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e2886a48898c7f24bff9323922884fdc = L.circleMarker(
+                [33.211156, -97.0758213],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_e2886a48898c7f24bff9323922884fdc.bindTooltip(
+                `<div>
+                     Ryan High School
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2e43bf18c74667ae264c7a3a85ef454e = L.circleMarker(
+                [32.9616425, -96.5869333],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_2e43bf18c74667ae264c7a3a85ef454e.bindTooltip(
+                `<div>
+                     Sachse High School
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_80fd82e6fc3d07dd8b8dd96bc78d65ab = L.circleMarker(
+                [30.2405758, -97.7617888],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_80fd82e6fc3d07dd8b8dd96bc78d65ab.bindTooltip(
+                `<div>
+                     San Juan Diego Catholic HS-Austin
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a99c34a4b40a10c2a5d23a28f7b89b8f = L.circleMarker(
+                [33.1204843, -97.1074658],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_a99c34a4b40a10c2a5d23a28f7b89b8f.bindTooltip(
+                `<div>
+                     Selwyn School- Argyle
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_0e983be41abd980874c7c6a3f3116b21 = L.circleMarker(
+                [32.9884056, -96.8044556],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_0e983be41abd980874c7c6a3f3116b21.bindTooltip(
+                `<div>
+                     Shelton School-Dallas
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f40cce1178184278338eea36396861f7 = L.circleMarker(
+                [32.7830019, -96.6911621],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_f40cce1178184278338eea36396861f7.bindTooltip(
+                `<div>
+                     Skyline High School
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6d4a2186f3f262f965b77049bdb110e0 = L.circleMarker(
+                [32.8728193, -96.6180748],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_6d4a2186f3f262f965b77049bdb110e0.bindTooltip(
+                `<div>
+                     South Garland High School
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3ed41f62d8fa3492e3eecd0111f4a531 = L.circleMarker(
+                [30.4913813, -97.7576045],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_3ed41f62d8fa3492e3eecd0111f4a531.bindTooltip(
+                `<div>
+                     St. Dominic Savio Catholic High School-Austin
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b2badcada2c64992ec33f1f5d4466600 = L.circleMarker(
+                [30.2885219, -97.8753767],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_b2badcada2c64992ec33f1f5d4466600.bindTooltip(
+                `<div>
+                     St. Michael's Catholic Preparatory School-Austin
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_16aebca21b3a61620e925c3f4d74329b = L.circleMarker(
+                [32.8296725, -97.0109538],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_16aebca21b3a61620e925c3f4d74329b.bindTooltip(
+                `<div>
+                     StoneGate Christian Academy-Irving
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ef004e3aac7643ceaa5711497f012f89 = L.circleMarker(
+                [30.5299986, -97.6614234],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_ef004e3aac7643ceaa5711497f012f89.bindTooltip(
+                `<div>
+                     Stony Point High School
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_cfaa651f13970e7a7565ab4190cb2a08 = L.circleMarker(
+                [30.4759259, -97.8445965],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_cfaa651f13970e7a7565ab4190cb2a08.bindTooltip(
+                `<div>
+                     Summit Christian Academy-Cedar Park
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5966b4ee99e9a707e43b38244321dd2e = L.circleMarker(
+                [32.7468659, -96.853565],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_5966b4ee99e9a707e43b38244321dd2e.bindTooltip(
+                `<div>
+                     Sunset High School
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c483db9cf87c7c1762718f7a77107525 = L.circleMarker(
+                [30.5483531, -97.4312063],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_c483db9cf87c7c1762718f7a77107525.bindTooltip(
+                `<div>
+                     Taylor High School
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_62cbfa2e0dc4c20cbc4c6454241dcb7d = L.circleMarker(
+                [32.7744898, -97.070193],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_62cbfa2e0dc4c20cbc4c6454241dcb7d.bindTooltip(
+                `<div>
+                     Texas Leadership of Arlington
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e73e397cd36da6b94326fb8c843e0dd6 = L.circleMarker(
+                [30.2512642, -97.75122],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_e73e397cd36da6b94326fb8c843e0dd6.bindTooltip(
+                `<div>
+                     Texas School for the Deaf-Austin
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d88cfd0d820a934719f1cf4baa40f142 = L.circleMarker(
+                [33.0746207, -96.88834],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_d88cfd0d820a934719f1cf4baa40f142.bindTooltip(
+                `<div>
+                     The Colony High School
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4dccd331e8077cbc22527cb57f3b785f = L.circleMarker(
+                [32.9265463, -96.7800785],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_4dccd331e8077cbc22527cb57f3b785f.bindTooltip(
+                `<div>
+                     The Covenant School-Dallas
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_cce831045ce2fcc6ac7e222d93df142c = L.circleMarker(
+                [33.0106532, -96.7701383],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_cce831045ce2fcc6ac7e222d93df142c.bindTooltip(
+                `<div>
+                     The Einstein School-Plano
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8b42c921e2b5a68015049068c4d5c428 = L.circleMarker(
+                [32.8486289, -96.9301716],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_8b42c921e2b5a68015049068c4d5c428.bindTooltip(
+                `<div>
+                     The Highlands School-Irving
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1fd48579446016100707f0ab8ed3110c = L.circleMarker(
+                [30.4693673, -97.8156212],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_1fd48579446016100707f0ab8ed3110c.bindTooltip(
+                `<div>
+                     The Master's Christian Academy-Cedar Park
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_aaf77c9a2f12e78308896eb515e29e7c = L.circleMarker(
+                [32.944615, -96.8380487],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_aaf77c9a2f12e78308896eb515e29e7c.bindTooltip(
+                `<div>
+                     The Westwood School-Dallas
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f8902d65340db24aa0334cb799b32b06 = L.circleMarker(
+                [32.8955614, -96.810601],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_f8902d65340db24aa0334cb799b32b06.bindTooltip(
+                `<div>
+                     The Winston School-Dallas
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_82dec10197f3b86f2e00c0fe1c53c938 = L.circleMarker(
+                [30.6001314, -97.8823072],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_82dec10197f3b86f2e00c0fe1c53c938.bindTooltip(
+                `<div>
+                     Tom Glenn High School
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_fb8020127660fe5069c98f504df8ae25 = L.circleMarker(
+                [30.23203, -97.7450654],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_fb8020127660fe5069c98f504df8ae25.bindTooltip(
+                `<div>
+                     Travis High School
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_97b8cd6e14a404e4703a363fc927b1d5 = L.circleMarker(
+                [32.9836511, -96.83323],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_97b8cd6e14a404e4703a363fc927b1d5.bindTooltip(
+                `<div>
+                     Trinity Christian Academy-Addison
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f3d1c9d7c027dca41cf9f85c9da8abc0 = L.circleMarker(
+                [32.8415895, -97.0943876],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_f3d1c9d7c027dca41cf9f85c9da8abc0.bindTooltip(
+                `<div>
+                     Trinity High School
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f2365f1c981fde38ef94717e313b413e = L.circleMarker(
+                [32.9479699, -96.891587],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_f2365f1c981fde38ef94717e313b413e.bindTooltip(
+                `<div>
+                     Turner High School
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_493496c9775853d1b2dcc06f56b4b9b6 = L.circleMarker(
+                [32.8779206, -96.8238972],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_493496c9775853d1b2dcc06f56b4b9b6.bindTooltip(
+                `<div>
+                     Ursuline Academy-Dallas
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_eb3b574c57c51ae5d13e71a1875188b9 = L.circleMarker(
+                [30.3970859, -97.8241048],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_eb3b574c57c51ae5d13e71a1875188b9.bindTooltip(
+                `<div>
+                     Vandegrift High School
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9d4f78fd17ad40b8a6f16f07d8e04faf = L.circleMarker(
+                [30.5159204, -97.7871785],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_9d4f78fd17ad40b8a6f16f07d8e04faf.bindTooltip(
+                `<div>
+                     Vista Ridge High School
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_75fbb29f757d06f56d2a6b7c6833027d = L.circleMarker(
+                [33.1679252, -96.8456091],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_75fbb29f757d06f56d2a6b7c6833027d.bindTooltip(
+                `<div>
+                     Wakeland High School
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e01ffd86e32f5b5b06b4eecda9b2d4eb = L.circleMarker(
+                [30.2484826, -97.7494963],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_e01ffd86e32f5b5b06b4eecda9b2d4eb.bindTooltip(
+                `<div>
+                     Waterloo School-Austin
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6cd0ecc50a2b6ce6e892952a244f8d22 = L.circleMarker(
+                [30.4441757, -97.6379436],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_6cd0ecc50a2b6ce6e892952a244f8d22.bindTooltip(
+                `<div>
+                     Weiss High School
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5db2e09e1eac4e57b341f42fc7e9d223 = L.circleMarker(
+                [30.2759096, -97.8137758],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_5db2e09e1eac4e57b341f42fc7e9d223.bindTooltip(
+                `<div>
+                     Westlake High School
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_542628aab875068586f8072f4c92893c = L.circleMarker(
+                [30.4567187, -97.798203],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_542628aab875068586f8072f4c92893c.bindTooltip(
+                `<div>
+                     Westwood High School
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4cef32bd1b729a5131bb491ffd9d25a1 = L.circleMarker(
+                [32.9173721, -96.8309755],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_4cef32bd1b729a5131bb491ffd9d25a1.bindTooltip(
+                `<div>
+                     White High School
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9cd760044a3fd486916a0ab2ca696ade = L.circleMarker(
+                [32.8060094, -96.7504029],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_9cd760044a3fd486916a0ab2ca696ade.bindTooltip(
+                `<div>
+                     Wilson High School
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_903c3823f0e29bff1095e524ea728912 = L.circleMarker(
+                [33.0161369, -96.4915819],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_903c3823f0e29bff1095e524ea728912.bindTooltip(
+                `<div>
+                     Wylie East High School
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5483da99d36514903ddadd9e7f5c9faa = L.circleMarker(
+                [33.0215727, -96.5143087],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_5483da99d36514903ddadd9e7f5c9faa.bindTooltip(
+                `<div>
+                     Wylie High School
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_53c32e5d8fcb27a9279715c8cbc137ae = L.circleMarker(
+                [33.0278072, -96.4921467],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 0}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_53c32e5d8fcb27a9279715c8cbc137ae.bindTooltip(
+                `<div>
+                     Wylie Preparatory Academy HS
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3c9a1465634a1ccf3586d6b02003b54a = L.circleMarker(
+                [33.078904, -96.883978],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 1}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_3c9a1465634a1ccf3586d6b02003b54a.bindTooltip(
+                `<div>
+                     The Colony SCHEELS
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5a066c9fe876a96a53b7463c48a0997c = L.circleMarker(
+                [30.527747, -97.810085],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 1}
+            ).addTo(map_509aa26acf63301907e403b5b998a9d9);
+        
+    
+            circle_marker_5a066c9fe876a96a53b7463c48a0997c.bindTooltip(
+                `<div>
+                     Cedar Park SCHEELS
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+</script>
+</html>
